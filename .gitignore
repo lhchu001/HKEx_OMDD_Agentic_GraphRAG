@@ -1,0 +1,29 @@
+# Secrets
+.env
+*.env
+
+# Runtime artifacts
+data/
+*.kuzu
+*.db
+chroma_omdd_db/
+bm25_docs_cache.jsonl
+graph_triples.jsonl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+evaluation/results.json
+.pytest_cache/

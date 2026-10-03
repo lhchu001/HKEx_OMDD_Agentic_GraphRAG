@@ -1,0 +1,74 @@
+[
+  {
+    "id": "exact_packet_header_size",
+    "category": "message_format",
+    "question": "What is the size of the PacketHeader in the HKEX OMD Derivatives Binary Interface Specifications?",
+    "expected_sources": ["HKEX_OMD_Derivatives_Binary_Interface_Specifications_v1-48.pdf"],
+    "required_answer_terms": ["PacketHeader", "bytes"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "sequence_number_field",
+    "category": "message_format",
+    "question": "Which field carries the sequence number in OMD Derivatives messages?",
+    "expected_sources": ["HKEX_OMD_Derivatives_Binary_Interface_Specifications_v1-48.pdf"],
+    "required_answer_terms": ["sequence", "field"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "gap_handling_procedure",
+    "category": "operational_procedure",
+    "question": "How should an OMD Derivatives client handle a message gap?",
+    "expected_sources": ["HKEX-OMDD-Developers-Guide-v1.27.pdf"],
+    "required_answer_terms": ["gap", "recovery"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "retransmission_server_gap_recovery",
+    "category": "operational_procedure",
+    "question": "How does an OMD client recover a message gap via the retransmission server?",
+    "expected_sources": ["HKEX-OMDD-Developers-Guide-v1.27.pdf"],
+    "required_answer_terms": ["retransmission", "gap"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "d_lite_channel_configuration",
+    "category": "connectivity",
+    "question": "How is the OMD D-Lite connection configured?",
+    "expected_sources": ["OMD_Connectivity_Guide_Derivatives-Market-v1.23.pdf"],
+    "required_answer_terms": ["D-Lite", "channel"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "production_message_channels",
+    "category": "connectivity",
+    "question": "List all OMD D-Lite Production Environment message channels.",
+    "expected_sources": ["OMD_Connectivity_Guide_Derivatives-Market-v1.23.pdf"],
+    "required_answer_terms": ["Production", "channel"],
+    "must_not_abstain": true,
+    "expect_graph_route": false
+  },
+  {
+    "id": "end_to_end_gap_recovery_cross_doc",
+    "category": "cross_document",
+    "question": "Explain the end-to-end process for recovering a message gap, including the relevant message semantics, recovery procedure, and connectivity requirements.",
+    "expected_sources": ["HKEX_OMD_Derivatives_Binary_Interface_Specifications_v1-48.pdf", "HKEX-OMDD-Developers-Guide-v1.27.pdf", "OMD_Connectivity_Guide_Derivatives-Market-v1.23.pdf"],
+    "required_answer_terms": ["message gap", "retransmission", "recovery"],
+    "must_not_abstain": true,
+    "expect_graph_route": true
+  },
+  {
+    "id": "d_lite_gap_recovery_cross_doc",
+    "category": "cross_document",
+    "question": "What must a client configure to consume OMD D-Lite data and recover from a message gap?",
+    "expected_sources": ["HKEX-OMDD-Developers-Guide-v1.27.pdf", "OMD_Connectivity_Guide_Derivatives-Market-v1.23.pdf"],
+    "required_answer_terms": ["D-Lite", "gap", "recovery"],
+    "must_not_abstain": true,
+    "expect_graph_route": true
+  }
+]
